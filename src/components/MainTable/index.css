@@ -1,0 +1,161 @@
+/* Table */
+
+/* Table to full parent height */
+.table-wrap {
+  height: 70vh;
+}
+
+.ant-table-wrapper {
+  height: 100%;
+}
+.ant-table-wrapper > .ant-spin-nested-loading {
+  height: 100%;
+}
+
+.ant-table-wrapper > .ant-spin-nested-loading > .ant-spin-container {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-flow: column nowrap;
+}
+
+.ant-table-wrapper
+  > .ant-spin-nested-loading
+  > .ant-spin-container
+  > .ant-table {
+  flex: auto;
+  overflow: hidden;
+}
+
+.ant-table-wrapper
+  > .ant-spin-nested-loading
+  > .ant-spin-container
+  > .ant-table
+  > .ant-table-container {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.ant-table-wrapper
+  > .ant-spin-nested-loading
+  > .ant-spin-container
+  > .ant-table
+  > .ant-table-container
+  > .ant-table-header {
+  flex: none;
+}
+
+.ant-table-wrapper
+  > .ant-spin-nested-loading
+  > .ant-spin-container
+  > .ant-table
+  > .ant-table-container
+  > .ant-table-header
+  > .ant-table-body {
+  flex: auto;
+  overflow: scroll;
+}
+
+.ant-table-wrapper
+  > .ant-spin-nested-loading
+  > .ant-spin-container
+  > .ant-table
+  > .ant-table-container
+  > .ant-table-header
+  > .ant-table-body
+  > .ant-table-pagination {
+  flex: none;
+}
+
+/* Table no data widget */
+
+.table
+  > .ant-spin-nested-loading
+  > .ant-spin-container
+  > .ant-table
+  > .ant-table-content
+  > .ant-table-scroll
+  > .ant-table-placeholder {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.table
+  > .ant-spin-nested-loading
+  > .ant-spin-container
+  > .ant-table
+  > .ant-table-content
+  > .ant-table-scroll
+  > .ant-table-placeholder
+  > .ant-empty
+  > .ant-empty-description {
+    color: white;
+}
+
+/* Table column */
+.table .ant-table-thead > tr > th {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.table
+  > .ant-spin-nested-loading
+  > .ant-spin-container
+  > .ant-table
+  > .ant-table-content
+  > .ant-table-scroll
+  > .ant-table-header {
+  background: unset;
+  background-color: unset;
+  margin-bottom: 0 !important;
+  overflow: auto !important;
+}
+
+/* Table row */
+.table
+  > .ant-spin-nested-loading
+  > .ant-spin-container
+  > .ant-table
+  > .ant-table-content
+  > .ant-table-scroll
+  > .ant-table-body
+  > table
+  > tbody
+  > tr:hover
+  > td {
+  background: unset;
+  background-color: unset;
+}
+
+.ant-table__row {
+  cursor: pointer;
+}
+
+.ant-table__row:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.table
+  .ant-table-fixed-header
+  > .ant-table-content
+  > .ant-table-scroll
+  > .ant-table-body {
+  background-color: rgba(0, 0, 0, 0);
+  color: #dddbdb;
+}
+
+/* Pagination */
+.table > .ant-spin-nested-loading > .ant-spin-container > .ant-pagination > li {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.table
+  > .ant-spin-nested-loading
+  > .ant-spin-container
+  > .ant-pagination
+  > li
+  > a {
+  background-color: inherit;
+  color: white;
+}
