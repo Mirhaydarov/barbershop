@@ -1,7 +1,11 @@
 // Core
 import React, { FC } from "react";
 import { useStore } from "effector-react";
-import { List, Divider, Typography } from "antd";
+import { Typography } from "antd";
+
+// Components
+import { DetailsList } from "../DetailsList";
+import { DetailsItem } from "../DetailsItem";
 
 // Store
 import { $client } from "../../models/client";
@@ -16,44 +20,41 @@ const ClientDetails: FC = () => {
     price,
     barber,
   } = useStore($client);
+  const { Text } = Typography;
+
+  const statusItemValue = {
+    Дата: createdDate,
+    Время: createdTime,
+    Статус: status,
+  };
+
+  const clientItemValue = {
+    "Имя Клиента": client,
+    "Номер телефона": phone,
+  };
+
+  const barberItemValue = {
+    Барбер: barber,
+    Цена: price,
+  };
+
+  const ItemJSX = (props: Record<string, any>) => {
+    const key = Object.keys(props);
+    const value = Object.values(props);
+
+    return key.map((item, i) => (
+      <DetailsItem key={item}>
+        <Text type="secondary">{item}</Text>
+        {value[i]}
+      </DetailsItem>
+    ));
+  };
 
   return (
     <>
-      <Divider orientation="left">Статус</Divider>
-      <List bordered>
-        <List.Item style={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography.Text type="secondary">Дата</Typography.Text> {createdDate}
-        </List.Item>
-        <List.Item style={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography.Text type="secondary">Время</Typography.Text>{" "}
-          {createdTime}
-        </List.Item>
-        <List.Item style={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography.Text type="secondary">Статус</Typography.Text> {status}
-        </List.Item>
-      </List>
-
-      <Divider orientation="left">Клиент</Divider>
-      <List bordered>
-        <List.Item style={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography.Text type="secondary">Имя Клиента</Typography.Text>{" "}
-          {client}
-        </List.Item>
-        <List.Item style={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography.Text type="secondary">Номер телефона</Typography.Text>{" "}
-          {phone}
-        </List.Item>
-      </List>
-
-      <Divider orientation="left">Барбер</Divider>
-      <List bordered>
-        <List.Item style={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography.Text type="secondary">Барбер</Typography.Text> {barber}
-        </List.Item>
-        <List.Item style={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography.Text type="secondary">Цена</Typography.Text> {price}
-        </List.Item>
-      </List>
+      <DetailsList title="Статус">{ItemJSX(statusItemValue)}</DetailsList>
+      <DetailsList title="Клиент">{ItemJSX(clientItemValue)}</DetailsList>
+      <DetailsList title="Барбер">{ItemJSX(barberItemValue)}</DetailsList>
     </>
   );
 };
