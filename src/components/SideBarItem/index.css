@@ -1,0 +1,25 @@
+/* Collapse */
+.ant-collapse-borderless > .ant-collapse-item:last-child,
+.ant-collapse-borderless > .ant-collapse-item:last-child .ant-collapse-header {
+  color: #c7c7c7;
+}
+
+.ant-collapse-content-box > .collapse {
+  box-shadow: unset !important;
+}
+
+/* Search bar */
+.ant-input-affix-wrapper .ant-input:not(:last-child) {
+  background-color: rgba(0, 0, 0, .1);
+  color: #fff;
+  border: .1em solid #c7c7c7;
+}
+
+.searchBar > span > .anticon {
+  color: rgba(255, 255, 255, .8);
+}
+
+/* Checkbox */
+.checkbox > .ant-checkbox > .ant-checkbox-inner {
+  background-color: rgba(0, 0, 0, .1);
+}
