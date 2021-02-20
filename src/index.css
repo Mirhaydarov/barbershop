@@ -1,0 +1,20 @@
+@import "~antd/dist/antd.css";
+
+body {
+  background-color: #323840;
+}
+
+.ant-table-body::-webkit-scrollbar {
+  width: 1em;
+  scrollbar-width: 1em;
+}
+
+.ant-table-body::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+  scrollbar-color: darkgrey rgba(0, 0, 0, 0);
+}
+
+.ant-table-body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  outline: 1px solid rgba(0, 0, 0, 0.3);
+}
