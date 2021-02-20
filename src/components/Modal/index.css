@@ -1,0 +1,23 @@
+.modal .ant-modal-content {
+  background-color: #282d33;
+}
+
+.modal .ant-divider-inner-text {
+  color: #fff;
+}
+
+.modal .ant-list {
+  color: #fff;
+}
+
+.modal .ant-typography.ant-typography-secondary {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.modal > .ant-modal-content > button {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.modal > .ant-modal-content > button:hover {
+  color: #1890ff;
+}
